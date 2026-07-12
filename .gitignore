@@ -1,0 +1,9 @@
+# FPGA 模擬與建置產生物
+build/
+**/build/
+*.out
+*.vcd
+
+# 作業系統與編輯器暫存檔
+.DS_Store
+.vscode/
