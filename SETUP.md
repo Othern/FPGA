@@ -58,7 +58,7 @@ yosys -V
 make test
 ```
 
-`make`（建置工具：依 Makefile 中的規則執行一組命令）會建立 `build/`，編譯並執行第一、二週的 testbench。若 Windows 沒有 `make`，可依各週 README 逐條執行 `iverilog` 與 `vvp`。
+`make`（建置工具：依 Makefile 中的規則執行一組命令）會建立各週的 `build/`，編譯並執行目前第一至第四週的 testbench。若 Windows 沒有 `make`，可依各週 README 逐條執行 `iverilog` 與 `vvp`。
 
 ## 查看波形
 

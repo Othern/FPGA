@@ -1,5 +1,5 @@
 // 偵測可重疊的 3-bit 序列 101。
-module sequence_detector (input logic clk, rst_n, serial_in, output logic detected);
+module sequence_detector_fail (input logic clk, rst_n, serial_in, output logic detected);
     typedef enum logic [1:0] {IDLE, GOT_1, GOT_10} state_t;
     state_t state, next_state;
     always_ff @(posedge clk) begin
@@ -18,7 +18,7 @@ module sequence_detector (input logic clk, rst_n, serial_in, output logic detect
                 else next_state = GOT_10;
             end
             GOT_10: begin
-                if (serial_in) next_state = GOT_1;
+                if (serial_in) next_state = IDLE;
                 else next_state = IDLE;
             end
             default: begin
