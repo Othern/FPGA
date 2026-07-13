@@ -115,3 +115,6 @@ PWM（pulse-width modulation，脈衝寬度調變）是一串固定頻率的 0/1
 - 可調整大小的常數以 `parameter` 表達，內部衍生常數以 `localparam` 表達。
 - 每改一次 RTL，先執行對應 testbench，再查看波形或 assertion（斷言，自動檢查條件）。
 - testbench 應避開在待測電路取樣的同一個時脈邊緣改變輸入，以免發生 race condition（競爭條件：多個模擬程序在同一時間更新，先後順序不確定）。
+
+## 補充教材
+[線上 Verilog 練習平台](https://hdlbits.01xz.net/wiki/Main_Page)

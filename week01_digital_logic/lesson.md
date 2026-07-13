@@ -119,3 +119,6 @@ end
 - 在一個 `always_ff` 裡使用 `=` 更新暫存器：可能與真實硬體的同步行為不符。
 - 忘記 reset：模擬起始值可能是 `X`，硬體上也沒有可靠初始狀態。
 - 把非同步按鍵直接送進時序邏輯：後續課程會學同步化與除彈跳。
+
+## 補充教材
+[清大數位邏輯 ocw](https://www.youtube.com/playlist?list=PLfXQiaewslOv00szAvSeASqSfKamP-0v8)
