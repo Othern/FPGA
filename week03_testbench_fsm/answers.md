@@ -59,3 +59,29 @@ gtkwave build/sequence_detector_fail.vcd
 第一個 `101` 後應回到 `GOT_1`，讓最後兩個 bit `01` 與前面的
 重疊開頭組成第二個 `101`。錯誤設計改回 `IDLE`，因此第 5 個 bit
 無法再次偵測到序列。
+
+## 練習 3：reset 邊界
+
+詳細模擬內容查看 `tb_sequence_detector_exercise3.sv`
+```
+iverilog -g2012 -o build/sequence_detector_exercise3.out src/sequence_detector_exercise3.sv sim/tb_sequence_detector_exercise3.sv
+vvp build/sequence_detector_exercise3.out
+gtkwave build/sequence_detector_exercise3.vcd
+```
+## 練習 4：進階規格修改
+
+### FSM
+![](./image.png)
+
+### 修改後的檔案
+- `src/sequence_detector_1101.sv`
+- `sim/tb_sequence_detector_1101.sv`
+
+### 指令
+```
+iverilog -g2012 -o build/sequence_detector_1101.out src/sequence_detector_1101.sv sim/tb_sequence_detector_1101.sv
+vvp build/sequence_detector_1101.out
+gtkwave build/sequence_detector_1101.vcd
+```
+### 測資
+> 1 1 0 1 reset 1 0 1
