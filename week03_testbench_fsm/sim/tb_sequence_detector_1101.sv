@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module tb_sequence_detector_1101;
     logic clk = 0, rst_n, serial_in, detected;
-    logic [3:0] history;
+    logic [2:0] history;
     int bit_number;
     sequence_detector_1101 dut (.*);
     // 這是 SystemVerilog 的模組實例化寫法。如果測試平台剛好有對應的就會直接寫過去
